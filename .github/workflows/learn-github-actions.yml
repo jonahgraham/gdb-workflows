@@ -8,5 +8,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
+      - name: Install GCC & GDB
+        run: sudo apt-get -y install build-essential gcc g++ gdb gdbserver
       - run: gdb --version
       - run: gcc --version
